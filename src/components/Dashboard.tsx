@@ -12,8 +12,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    axios.get('http://localhost:3000/projects', {
-      headers: { Authorization: Bearer ${token} }
+    axios.get('http://localhost:5173/projects', {
+      headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setProjects(res.data))
     .catch(() => console.log("Không thể tải danh sách project"));
