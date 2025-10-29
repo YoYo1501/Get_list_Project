@@ -16,12 +16,12 @@ export default function Dashboard() {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setProjects(res.data))
-    .catch(() => console.log("Không thể tải danh sách project"));
+    .catch(() => console.log("Unable to load project list"));
   }, []);
 
   return (
     <div className="bg-white p-8 shadow-xl rounded-xl w-[600px]">
-      <h1 className="text-2xl font-bold mb-4">Danh sách dự án</h1>
+      <h1 className="text-2xl font-bold mb-4">Project List</h1>
       <ul className="space-y-2">
         {projects.map((p) => (
           <li key={p.id} className="border p-3 rounded-md">
