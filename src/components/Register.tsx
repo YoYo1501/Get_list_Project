@@ -29,7 +29,6 @@ function Register(props) {
     }
   }
 
-
   function handleGoToLogin() {
     props.goToLog();
   }
@@ -88,8 +87,13 @@ function Register(props) {
           </Button>
         </form>
         <p>
-            <span>Already have an account?</span>
-            <span onClick={handleGoToLogin} className="text-blue-500 cursor-pointer">Login now</span>
+          <span>Already have an account?</span>
+          <span
+            onClick={handleGoToLogin}
+            className="text-blue-500 cursor-pointer"
+          >
+            Login now
+          </span>
         </p>
       </div>
     </div>
